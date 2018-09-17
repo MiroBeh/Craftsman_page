@@ -1,9 +1,12 @@
 $("a[href^='#']").click(function(e) {
-	e.preventDefault();
+  e.preventDefault();
 
-	var position = $($(this).attr("href")).offset().top;
+  var position = $($(this).attr("href")).offset().top;
 
-	$("body, html").animate({
-		scrollTop: position
-	} /* speed */ );
+  $("body, html").animate(
+    {
+      scrollTop: position
+    },
+    2000
+  );
 });

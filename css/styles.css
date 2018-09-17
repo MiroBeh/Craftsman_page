@@ -1,0 +1,402 @@
+* {
+  box-sizing: border-box;
+  transition: all ease-in-out 250ms;
+}
+
+body {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 95%;
+  max-width: 70em;
+  margin: 0 auto;
+}
+
+
+/* typographie */
+
+h1 {
+  font-weight: 300;
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 1.5em;
+  font-weight: 900;
+  margin-top: 1em;
+}
+
+@media(min-width: 60rem) {
+  .title {
+    font-size: 3.5rem;
+  }
+}
+
+/* buttons */
+
+.button {
+  display: inline-block;
+  font-size: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-width: 2px;
+  border-style: solid;
+  padding: .5rem 1.75rem;
+}
+
+.button-accent {
+  color: #1da1f2;
+  border-color: #1da1f2;
+}
+
+.button-accent:hover,
+.border-accent:focus {
+  background: #1da1f2;
+  color: #232323;
+}
+
+@media(min-width: 60rem) {
+  .button {
+    font-size: 1.3rem;
+  }
+}
+
+
+/* Header */
+
+ header {
+   position: absolute;
+   left: 0;
+   right: 0;
+   margin: 1em;
+ }
+
+ .logo {
+   color: #1da1f2;
+   font-size: 2rem;
+   margin: 0;
+ }
+
+ nav ul {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+ }
+
+ nav li {
+   display: inline-block;
+   margin: 0.5em;
+ }
+
+ nav a {
+   font-weight: 900;
+   text-decoration: none;
+   text-transform: uppercase;
+   font-size: .75rem;
+   padding: .5em;
+   color: #fff;
+ }
+
+ nav a:hover,
+ nav a:focus {
+   color: #ddd;
+ }
+
+ @media(min-width:60rem){
+  .logo {
+    float: left;
+  }
+
+  nav {
+    float: right;
+  }
+
+  nav a {
+    font-size: 0.85rem;
+  }
+
+  nav li {
+    margin: 1em;
+  }
+ }
+
+
+ /* Home-hero */
+
+ .home-hero {
+   background-image: url(../img/werkbank-dark.jpg);
+   background-size: cover;
+   padding: 10em 0;
+ }
+
+ .home-hero h1 {
+   color: #fff;
+ }
+
+ @media (min-width: 60rem) {
+   .home-hero {
+     height: 100vh;
+     padding-top: 25vh;
+   }
+ }
+
+
+ /* Home about */
+
+ .home-about-textbox{
+   background-color: #232323;
+   padding: 4em;
+   width: 100vw;
+   margin-left: -2.5vw;
+   outline: 2px solid #1da1f2;
+   outline-offset: -2.5em;
+   color: #fff;
+   position: relative;
+ }
+
+ .home-about-textbox h1 {
+   color: #1da1f2;
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+   top: .65em;
+   background: #232323;
+   padding: 0 .15em;
+   font-size: 2rem;
+ }
+
+@media(min-width: 25rem) {
+  .home-about-textbox h1{
+    font-size: 2.5rem;
+    top: .4em;
+  }
+}
+
+
+ @media(min-width: 60rem) {
+   .home-about {
+     background-image: url(../img/holzbalken.jpg);
+     background-size: cover;
+     background-repeat: no-repeat;
+     padding-bottom: 8em;
+   }
+
+   .home-about-textbox {
+     width: 40%;
+     margin-left: -2.5%;
+     top: -3em;
+     box-shadow: 0 0 4em 0 rgba(0,0,0,.5);
+   }
+
+   .home-about-textbox h1 {
+     left: 9rem;
+   }
+
+   .home-about-textbox p {
+     text-align: justify;
+   }
+ }
+
+
+ /* Portfolio */
+
+ .portfolio {
+   margin: 3em 0;
+ }
+
+ .portfolio h1 {
+   font-size: 1.7rem;
+ }
+
+ .port-item {
+   position: relative;
+   margin: 0;
+ }
+
+ .port-item img {
+   display: block;
+ }
+
+ .port-desc {
+   position: absolute;
+   z-index: 100;
+   bottom: 2.5em;
+   left: 4em;
+   right: 4em;
+   color: white;
+   background: rgba(0, 0, 0, 0.5);
+
+ }
+
+ .port-desc p {
+   margin: .3em;
+ }
+
+ @media (min-width: 25rem) {
+   .port-item {
+     width: 50%;
+     float: left;
+   }
+ }
+
+ @media (min-width: 50rem) {
+   .port-item {
+     width: 33.3333334%;
+     float: left;
+     overflow: hidden;
+   }
+
+   .port-desc {
+     transform: translateY(250%);
+   }
+
+   .portfolio {
+     max-width: 1200px;
+     margin: 3em auto;
+   }
+
+   .port-item:hover .port-desc {
+     transform: translateY(0%);
+   }
+ }
+
+ /* ========== Footer ========== */
+
+ footer {
+  display: flex;
+  flex-direction: COLUMN;
+  justify-content: space-around;
+  margin: 0;
+  margin-top: 3em;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  background-color: #f3f3f3;
+ }
+
+ @media only screen and (min-width: 768px) {
+	footer {
+		float: left;
+		vertical-align: middle;
+		height: calc(30vh);
+		min-height: calc(30vh);
+		}
+}
+
+footer a {
+  color: #232323;
+  text-decoration: none;
+  font-weight:bold;
+}
+
+footer p {
+  margin: 0px;
+  color: #232323;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.contact-column {
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 3.5em;
+  padding-bottom: 3.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  }
+
+@media only screen and (min-width: 768px) {
+  .contact-column {
+    width: 30%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    }
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-contact {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+  }
+}
+
+.stroke-solid {
+  stroke-dashoffset: 0;
+  stroke-dashArray: 300;
+  stroke-width: 2px;
+  transition: stroke-dashoffset 0.8s ease,  opacity 0.5s ease;
+}
+
+.stroke-under {
+  stroke-dashoffset: 00;
+  stroke-dashArray: 300;
+  stroke-width: 1px;
+}
+
+.st0 {
+  fill: #808080;
+  display:inline-block;
+  border:0;
+  position: absolute;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1);
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1);
+  transition: all 200ms ease-in;
+	transform-origin: 50% 50%;
+  transform: scale(1);
+}
+
+#play:hover .stroke-solid {
+  opacity: 1;
+  stroke-dashoffset: -300;
+}
+
+#play:hover .st0 {
+  fill: #1da1f2;
+  -webkit-transition: all 100ms ease-in;
+  -webkit-transform: scale(1.05);
+  -ms-transition: all 100ms ease-in;
+  -ms-transform: scale(1.05);
+  -moz-transition: all 100ms ease-in;
+  -moz-transform: scale(1.05);
+  transition: all 100ms ease-in;
+  transform-origin: 50% 50%;
+  transform: scale(1.05);
+}
+
+.ol {
+  border-top: 1px solid #232323;
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .vl {
+      border-left: 1px solid #232323;
+  }
+  .ol {
+    display: none;
+  }
+}
